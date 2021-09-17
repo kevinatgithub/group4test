@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{
+    var random = new Random();
+    var number = random.Next(1, 10);
+}
+@model Menu
+<b>Test @number</b>
+<br />
+@if (number > 5)
+{
+    <b>number is greater than 5</b>
+}
+else
+{
+    <b>Number is lower than 5 or equals</b>
+}
+your message is @Model.Message
+<br />
+@ViewBag.MyMessage
+<br />
+@ViewData["MyMessage"]
