@@ -25,7 +25,8 @@ namespace WebApplication1
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddSingleton<Order>
+            services.AddSingleton<Order>(options => new Order());
+        
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
